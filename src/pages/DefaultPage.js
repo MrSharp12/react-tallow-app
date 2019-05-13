@@ -1,9 +1,22 @@
 import React from 'react';
+import Hero from '../components/Hero';
+import defaultBKG from '../images/defaultBcg.jpeg';
+import { Link } from 'react-router-dom';
 
-const DefaultPage = () => (
-    <h1>
-        Hello from Default Page!
-    </h1>
-);
+const DefaultPage = () => {
+    return (
+        <>
+            <Hero img={defaultBKG} title="404" max="true">
+                <h2 className="text-uppercase">page not found</h2>
+                <Link
+                    to="/"
+                    className="main-link"
+                    style={{ marginTop: "2rem" }}>
+                    return home
+                </Link>
+            </Hero>
+        </>
+    );
+};
 
 export default DefaultPage;
