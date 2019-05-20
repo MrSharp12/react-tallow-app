@@ -1,11 +1,10 @@
 import React from 'react';
+import Info from './Info';
 
 const About = () => {
-    return (
-        <div>
-            Hello from about.
-        </div>
-    )
+    return <>
+    <Info />
+    </>;
 };
 
 export default About;

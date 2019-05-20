@@ -26,6 +26,7 @@ const NavBar = () => {
 const NavWrapper = styled.nav`
   position: -webkit-sticky;
   position: sticky;
+  z-index: 1;
   top: 0;   
   width: 100%;
   padding: 1rem 1.5rem;

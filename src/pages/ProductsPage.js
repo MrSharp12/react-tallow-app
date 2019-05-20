@@ -1,9 +1,15 @@
 import React from 'react';
+import Products from '../components/ProductPage/Products';
+import Hero from '../components/Hero';
+import productBKG from '../images/productsBcg.jpeg';
 
-const ProductsPage = () => (
-    <h1>
-        Hello from Products Page!
-    </h1>
-);
+const ProductsPage = () => {
+    return (
+        <>
+        <Hero img={productBKG} />
+        <Products />
+        </>
+    )
+};
 
 export default ProductsPage;

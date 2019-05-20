@@ -6,7 +6,7 @@ export const items = [
         price: 10,
         description:
           "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
-        image: { fields: { file: { url: "../images/resizedDefault.png" } } }
+        image: { fields: { file: { url: "img/resizedDefault.png" } } }
       }
     },
     {
@@ -16,7 +16,7 @@ export const items = [
         price: 20,
         description:
           "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
-        image: { fields: { file: { url: "../images/resizedDefault.png" } } }
+        image: { fields: { file: { url: "img/resizedDefault.png" } } }
       }
     },
     {
@@ -26,7 +26,7 @@ export const items = [
         price: 30,
         description:
           "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
-        image: { fields: { file: { url: "../images/resizedDefault.png" } } }
+        image: { fields: { file: { url: "img/resizedDefault.png"} } }
       }
     },
     {
@@ -36,7 +36,7 @@ export const items = [
         price: 15,
         description:
           "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
-        image: { fields: { file: { url: "../images/resizedDefault.png" } } }
+        image: { fields: { file: { url: "img/resizedDefault.png" } } }
       }
     }
 ];
