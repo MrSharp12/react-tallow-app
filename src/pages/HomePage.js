@@ -11,7 +11,7 @@ const HomePage = () => {
                 <Link 
                 to="/products"
                 className="main-link"
-                style={{ margin: "2rem"}}>
+                style={{ margin: "2rem", marginTop: "30rem"}}>
                 Products</Link>
             </Hero>
             <Features></Features>

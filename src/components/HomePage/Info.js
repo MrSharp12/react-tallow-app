@@ -1,18 +1,18 @@
 import React from 'react';
 import Title from '../Title';
-import aboutIMG from '../../images/aboutBcg.jpeg';
+import mereIMG from '../../images/mere.jpg';
 
 const Info = () => {
     return (
         <section className="py-5">
             <div className="container">
                 <div className="row">
-                    <div className="col-10 mx-auto col-md-6 my-3">
+                    <div className="col-10 mx-auto col-md-5 my-5">
                         <img 
-                        src={aboutIMG} 
+                        src={mereIMG} 
                         className="img-fluid img-thumbnail" 
-                        alt="about image"
-                        style={{ background: "var(--darkGrey"}} 
+                        alt="about"
+                        style={{ background: "var(--darkGrey", transform: "rotate(90deg)"}} 
                         />
                         
                     </div>

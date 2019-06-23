@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import mainBKG from '../images/mainBcg.jpeg';
+import heroLanding from '../images/heroLanding.JPG';
 
-const Hero = ({ img, title, max, children }) => {
+const Hero = ({ img, max, children }) => {
     return (
         <HeroWrapper max={max} img={img}>
             <div className="Banner">
-                <h1 className="title">{title}</h1>
                 {children}
             </div>
         </HeroWrapper>
@@ -25,17 +24,17 @@ background: linear-gradient(var(--primaryRGBA),
  var(--primaryRGBA)), 
  url(${props => props.img}) center/cover 
  no-repeat;
- .title {
+ /* .title {
      padding-top: 2rem;
      font-size: 3.5rem;
      text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
      text-transform: uppercase;
      letter-spacing: var(--mainSpacing);
- }
+ } */
 `;
 
 Hero.defaultProps = {
-    img: mainBKG
+    img: heroLanding
 };
 
 export default Hero;

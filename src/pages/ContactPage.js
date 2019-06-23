@@ -1,12 +1,12 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import contactIMG from '../images/contactBcg.jpeg';
+import contactHero from '../images/contactHero.JPG';
 import Contact from '../components/ContactPage/Contact';
 
 const ContactPage = () => {
     return (
         <>
-            <Hero img={contactIMG}></Hero>
+            <Hero img={contactHero}></Hero>
             <Contact />
         </>
     )
