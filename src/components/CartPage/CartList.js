@@ -13,7 +13,7 @@ const CartList = () => {
                             if (cart.length === 0) {
                                 return (
                                     <h1 className="text-title text-center my-4">
-                                        your cart is empty
+                                        Your Cart Is Empty
                                     </h1>
                                 );
                             };

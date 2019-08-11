@@ -2,41 +2,41 @@ export const items = [
     {
       sys: { id: 0 },
       fields: {
-        title: "unscented",
+        title: "Unscented",
         price: 24,
         description:
-          "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
-        image: { fields: { file: { url: "img/test.jpg" } } }
+          "Safe for babies and children, wonderful for people that are sensitive to fragrances.",
+        image: { fields: { file: { url: "img/unscented.JPG" } } }
       }
     },
     {
       sys: { id: 1 },
       fields: {
-        title: "lavender",
+        title: "Lavender",
         price: 24,
         description:
-          "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
-        image: { fields: { file: { url: "img/resizedDefault.png" } } }
+          "An all around winner, smells fantastic and heals many types of skin ailments beautifully.",
+        image: { fields: { file: { url: "img/lavender.JPG" } } }
       }
     },
     {
       sys: { id: 2 },
       fields: {
-        title: "carrot, lavender, geranium",
+        title: "Carrot, Lavender, & Geranium",
         price: 24,
         description:
-          "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
-        image: { fields: { file: { url: "img/resizedDefault.png"} } }
+          "Light and aromatic, this is an excellent moisturizer for wrinkles and rough, dry skin, and helps to balance the moisture in skin.",
+        image: { fields: { file: { url: "img/clg.JPG"} } }
       }
     },
     {
       sys: { id: 3 },
       fields: {
-        title: "frankenscene",
+        title: "Lavender, Frankincense, & Chamomile",
         price: 24,
         description:
-          "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
-        image: { fields: { file: { url: "img/resizedDefault.png" } } }
+          "May be used to reduce acne, blemishes, and the appearance of scars and wrinkles. ",
+        image: { fields: { file: { url: "img/lfc.jpg" } } }
       }
     }
 ];

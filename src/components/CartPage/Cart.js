@@ -8,7 +8,7 @@ const Cart = () => {
     return (
         <section className="py-5">
             <div className="container">
-                <Title title="your cart items" center />
+                <Title title="Cart" center />
             </div>
             <CartColumns />
             <CartList />

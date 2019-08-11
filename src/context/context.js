@@ -15,7 +15,7 @@ class ProductProvider extends Component {
         cartItems: 0,
         cartSubTotal: 0,
         cartTotal: 0,
-        // TODO: shipping: will be dependent on quantity
+        shipping: 0,
         storeProducts: [],
         filteredProducts: [],
         singleProduct: {},
@@ -41,9 +41,9 @@ class ProductProvider extends Component {
             singleProduct: this.getStorageProduct(),
             loading: false
         },
-        () => {
-            this.addTotals();
-        }
+            () => {
+                this.addTotals();
+            }
         );
     };
 
@@ -62,24 +62,35 @@ class ProductProvider extends Component {
     };
 
     getTotals = () => {
-        // TODO: will need shipping
+        let cartShipping = 0;
         let subTotal = 0;
         let cartItems = 0;
+        
         this.state.cart.forEach(item => {
             subTotal += item.total;
             cartItems += item.count;
         })
+        
+        if (subTotal > 59 || cartItems === 0) {
+            this.setState({shipping: 0});
+            cartShipping = 0;
+        } else {
+            this.setState({shipping: 7.95});
+            cartShipping = 7.95
+        }
 
         let total = parseFloat(subTotal.toFixed(2));
-        // TODO: total = subTotal + shipping;
+        total += cartShipping;
+
         return {
             cartItems,
             subTotal,
+            cartShipping,
             total
         };
     };
 
-    addTotals = () => { 
+    addTotals = () => {
         const totals = this.getTotals();
         this.setState({
             cartItems: totals.cartItems,
@@ -93,8 +104,8 @@ class ProductProvider extends Component {
     };
 
     addToCart = (id) => {
-        
-        let tempCart = [...this.state.cart ];
+
+        let tempCart = [...this.state.cart];
         let tempProducts = [...this.state.storeProducts];
         let tempItem = tempCart.find(item => item.id === id);
 
@@ -112,19 +123,19 @@ class ProductProvider extends Component {
 
         this.setState(() => {
             return { cart: tempCart }
-        }, 
-        () => {
-            this.addTotals();
-            this.syncStorage();
-            this.openCart();
-        })
+        },
+            () => {
+                this.addTotals();
+                this.syncStorage();
+                this.openCart();
+            })
     };
 
     setSingleProduct = (id) => {
         let product = this.state.storeProducts.find(item => item.id === id);
         localStorage.setItem('singleProduct', JSON.stringify(product));
         this.setState({
-            singleProduct: {...product},
+            singleProduct: { ...product },
             loading: false
         });
     };
@@ -154,16 +165,16 @@ class ProductProvider extends Component {
         cartItem.total = parseFloat(cartItem.total.toFixed(2));
         this.setState(() => {
             return {
-                cart:[...tempCart]
+                cart: [...tempCart]
             }
-        }, 
-        () => {
-            this.addTotals();
-            this.syncStorage();
-        });
+        },
+            () => {
+                this.addTotals();
+                this.syncStorage();
+            });
     };
 
-    decrement = id =>{
+    decrement = id => {
         let tempCart = [...this.state.cart];
         const cartItem = tempCart.find(item => item.id === id);
         cartItem.count = cartItem.count - 1;
@@ -175,36 +186,36 @@ class ProductProvider extends Component {
             cartItem.total = parseFloat(cartItem.total.toFixed(2));
             this.setState(() => {
                 return {
-                    cart:[...tempCart]
+                    cart: [...tempCart]
                 }
-            }, 
+            },
+                () => {
+                    this.addTotals();
+                    this.syncStorage();
+                });
+        }
+    };
+
+    removeItem = id => {
+        let tempCart = [...this.state.cart];
+        tempCart = tempCart.filter(item => item.id !== id);
+        this.setState({
+            cart: [...tempCart]
+        },
             () => {
                 this.addTotals();
                 this.syncStorage();
             });
-        }
-    };
-
-    removeItem = id =>{
-        let tempCart = [...this.state.cart];
-        tempCart = tempCart.filter(item => item.id !== id);
-        this.setState({
-            cart:[...tempCart]
-        }, 
-        () => {
-            this.addTotals();
-            this.syncStorage();
-        });
     };
 
     clearCart = () => {
         this.setState({
-            cart:[]
-        }, 
-        () => {
-            this.addTotals();
-            this.syncStorage();
-        });
+            cart: []
+        },
+            () => {
+                this.addTotals();
+                this.syncStorage();
+            });
     };
 
     handleChange = (event) => {
@@ -220,7 +231,7 @@ class ProductProvider extends Component {
                 closeCart: this.closeCart,
                 openCart: this.openCart,
                 addToCart: this.addToCart,
-                setSingleProduct: this.setSingleProduct, 
+                setSingleProduct: this.setSingleProduct,
                 increment: this.increment,
                 decrement: this.decrement,
                 removeItem: this.removeItem,

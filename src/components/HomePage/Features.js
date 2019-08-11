@@ -9,19 +9,20 @@ export default class Features extends Component {
                 id: 1,
                 icon: <FaMortarPestle />,
                 title: 'hand crafted',
-                text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quos, accusamus.'
+                text: 'Made in small, hand crafted batches'
             },
             {
                 id: 2,
                 icon: <FaLeaf />,
                 title: 'all natural',
-                text: 'The finest ingredients, 100% grass fed cows.'
+                text: "Beyond organic 100% grass-fed cows"
             },
             {
                 id: 3,
                 icon: <FaPlusSquare />,
                 title: 'medicinal',
-                text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quos, accusamus.'
+                text: 'Nourish and soothe a variety of skin conditions'
+            
             }
         ]
     };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
-import allProductsHero from '../images/allProductsHero.JPG';
+import allProductsHero from '../images/allProductsHero.jpg';
 import { ProductConsumer } from '../context';
 //import ProductSizeDropdown from '../components/ProductPage/ProductSizeDropdown';
 
@@ -30,7 +30,7 @@ export default class ProductsPage extends React.Component {
                             console.log('hello from loading');
                             return <h1>product loading...</h1>
                         }
-                        const { description, id, price, priceSmall, title, image } = singleProduct
+                        const { description, id, title, image } = singleProduct
                         return <section className="py-5">
                             <div className="container">
                                 <div className="row">
@@ -56,7 +56,7 @@ export default class ProductsPage extends React.Component {
                                         <Link
                                             to='/products'
                                             className="main-link"
-                                            style={{ margin: '0.75rem' }}>back to product</Link>
+                                            style={{ margin: '0.75rem' }}>back to products</Link>
                                     </div>
                                 </div>
                             </div>

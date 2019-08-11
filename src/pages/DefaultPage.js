@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import defaultBKG from '../images/defaultBcg.jpeg';
+import defaultBKG from '../images/defaultLanding.JPG';
 import { Link } from 'react-router-dom';
 
 const DefaultPage = () => {

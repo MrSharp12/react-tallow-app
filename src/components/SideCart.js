@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const SideCart = () => {
     return <ProductConsumer>
         {value => {
-            const { cartOpen, closeCart, cart, cartTotal } = value;
+            const { cartOpen, closeCart, cart, shipping, cartTotal } = value;
             return <CartWrapper show={cartOpen} onClick={closeCart}>
                 <ul>
                     {cart.map(item => {
@@ -26,6 +26,9 @@ const SideCart = () => {
                         </li>
                     })}
                 </ul>
+                <h4 className="text-capitalize text-main">
+                    shipping: ${shipping}
+                </h4>
                 <h4 className="text-capitalize text-main">
                     cart total: ${cartTotal}
                 </h4>

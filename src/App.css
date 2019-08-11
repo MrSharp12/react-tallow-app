@@ -15,7 +15,6 @@ body {
   font-family: 'Lato', sans-serif !important;
   background: var(--mainGrey) !important;
   color: var(--mainBlack);
-  text-transform: capitalize;
 }
 
 .main-link {
