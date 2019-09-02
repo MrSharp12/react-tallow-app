@@ -7,7 +7,7 @@ import About from '../components/HomePage/About';
 const HomePage = () => {
     return (
         <>
-            <Hero title="Rejunevenate Hydrate"  max="true">
+            <Hero title=""  max="true">
                 <Link 
                 to="/products"
                 className="main-link"

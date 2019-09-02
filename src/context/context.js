@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { linkData } from './linkData';
 import { socialData } from './socialData';
-import { items } from './ProductData';
+//import { items } from './ProductData';
+import { client } from './contentful';
 
 const ProductContext = React.createContext();
 
@@ -24,13 +25,19 @@ class ProductProvider extends Component {
 
     componentDidMount() {
         // TODO: data eventually will come from db
-        this.setProducts(items);
+        //this.setProducts(items);
+        client
+            .getEntries({
+                content_type: "tallowData"
+            })
+            .then(response => this.setProducts(response.items))
+            .catch(console.error);
     };
 
     setProducts = products => {
         let storeProducts = products.map(item => {
             const { id } = item.sys;
-            const image = item.fields.image.fields.file.url;
+            const image = item.fields.image[0].fields.file.url;
             const product = { id, ...item.fields, image };
             return product;
         });
@@ -65,17 +72,17 @@ class ProductProvider extends Component {
         let cartShipping = 0;
         let subTotal = 0;
         let cartItems = 0;
-        
+
         this.state.cart.forEach(item => {
             subTotal += item.total;
             cartItems += item.count;
         })
-        
+
         if (subTotal > 59 || cartItems === 0) {
-            this.setState({shipping: 0});
+            this.setState({ shipping: 0 });
             cartShipping = 0;
         } else {
-            this.setState({shipping: 7.95});
+            this.setState({ shipping: 7.95 });
             cartShipping = 7.95
         }
 

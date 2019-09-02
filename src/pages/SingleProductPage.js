@@ -36,7 +36,7 @@ export default class ProductsPage extends React.Component {
                                 <div className="row">
                                     <div className="col-10 mx-auto col-sm-8 col-md-6 my-3">
                                         <img
-                                            src={`../${image}`}
+                                            src={image}
                                             alt="single product"
                                             className="img-fluid"
                                         />

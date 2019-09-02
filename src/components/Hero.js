@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import heroLanding from '../images/heroLanding.JPG';
+import heroLanding from '../images/heroLanding2rs.jpg';
 
 const Hero = ({ img, max, children }) => {
     return (

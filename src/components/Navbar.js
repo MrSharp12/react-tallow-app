@@ -11,7 +11,7 @@ const NavBar = () => {
             return <NavWrapper>
                 <div className="nav-center">
                     <FaBars className="nav-icon" onClick={handleSidebar} />
-                    <div>
+                    <div className="nav-cart"> 
                         <FaCartPlus className="nav-icon" onClick={handleCart}>
                         </FaCartPlus>
                         <div className="cart-items">{cartItems}</div>
@@ -51,8 +51,8 @@ const NavWrapper = styled.nav`
       color: var(--mainWhite);
       font-size: 0.85rem;
       position: absolute;
-      top: 8px;
-      right: 115px;
+      top: -8px;
+      right: -16px;
       padding: 0 5px;
       border-radius: 50%;
   }
