@@ -12,7 +12,7 @@ const Info = () => {
                         src={mereIMG} 
                         className="img-fluid img-thumbnail" 
                         alt="about"
-                        style={{ background: "var(--darkGrey", display: "inline-block", transform: "rotate(90deg)"}} 
+                        style={{ background: "var(--darkGrey", transform: "rotate(90deg)", WebkitTransform: "rotate(90deg)"}} 
                         />
                         
                     </div>
