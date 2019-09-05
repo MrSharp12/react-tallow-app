@@ -16,7 +16,7 @@ const Footer = () => {
                                 </p>
                             </div>
                             <div className="col-md-6 d-flex justify-content-around">
-                                {value.socialIcons.map(item => <a href={item.url} key={item.id}>
+                                {value.socialIcons.map(item => <a href={item.url} key={item.id} target="_blank" rel="noopener noreferrer">
                                     {item.icon}
                                 </a>)}
                             </div>

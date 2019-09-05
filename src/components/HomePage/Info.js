@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from '../Title';
-import mereIMG from '../../images/mere.jpg';
+import mereIMG from '../../images/mereRotate.jpg';
 
 const Info = () => {
     return (
@@ -12,9 +12,8 @@ const Info = () => {
                         src={mereIMG} 
                         className="img-fluid img-thumbnail" 
                         alt="about"
-                        style={{ background: "var(--darkGrey", WebkitTransform: "rotate(90deg)"}} 
+                        style={{ background: "var(--darkGrey"}} 
                         />
-                        
                     </div>
                     <div className="col-10 mx-auto col-md-6 my-3">
                     <Title title="About" center />
