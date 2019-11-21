@@ -9,7 +9,7 @@ export default class ProductsPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: 24
+            value: 28
         };
 
         this.handleChange = this.handleChange.bind(this);
