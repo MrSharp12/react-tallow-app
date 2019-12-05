@@ -30,7 +30,7 @@ export default class ProductsPage extends React.Component {
                             console.log('hello from loading');
                             return <h1>product loading...</h1>
                         }
-                        const { description, id, title, image } = singleProduct
+                        const { description, id, title, image, price } = singleProduct
                         return <section className="py-5">
                             <div className="container">
                                 <div className="row">
@@ -43,7 +43,7 @@ export default class ProductsPage extends React.Component {
                                     </div>
                                     <div className="col-10 mx-auto col-sm-8 col-md-6 my-3">
                                         <h5 className="text-title mb-4">{title}</h5>
-                                        <h5 className="text-main text-capitalize mb-4">Price: ${this.state.value}</h5>
+                                        <h5 className="text-main text-capitalize mb-4">Price: ${price}</h5>
                                         <p className="text-capitalize text-title mt-3">description</p>
                                         <p>{description}</p>
                                         <button
